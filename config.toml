@@ -1,0 +1,35 @@
+# Example Configuration File
+
+[data]
+  [data.source]
+  file = "test.json"
+
+  [data.filtering]
+  start = 2022-11-01
+  end   = "now"
+
+
+[processing]
+  [processing.interpolation]
+  type = "linear"
+  points = 2
+
+  [processing.smoothing]
+  type = "rolling mean"
+  points = 7
+
+
+[output]
+  [output.stats]
+    [output.stats.catenum]
+      show = true
+    [output.stats.onevar]
+      show = true
+    [output.stats.prediction]
+      show = false
+
+  [output.tables]
+
+  [output.graphs]
+    [output.graphs.timeline]
+      show = true
