@@ -5,8 +5,7 @@
   file = "test.json"
 
   [data.filtering]
-  start = 2022-11-01
-  end   = "now"
+  query = "WHERE"
 
 
 [processing]

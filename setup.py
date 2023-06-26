@@ -19,7 +19,6 @@ setup(
         'scipy',
         'rich',
         'click',
-        'pixelsparser',
         'toml'
     ],
     entry_points={
