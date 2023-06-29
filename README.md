@@ -1,4 +1,7 @@
 # PixelsJournal Data Processing
+<a href="https://codeclimate.com/github/snorklerjoe/PixelsJournal-data-processing/maintainability"><img src="https://api.codeclimate.com/v1/badges/a45b5f684643bce89c4d/maintainability" /></a>
+<a href="https://codeclimate.com/github/snorklerjoe/PixelsJournal-data-processing/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a45b5f684643bce89c4d/test_coverage" /></a>   
+
  Processes data exported from [Teo Vogel's "Pixels Journal" app](https://teovogel.me/pixels/) to find correlation information and more advanced statistics. 
 
 ---
