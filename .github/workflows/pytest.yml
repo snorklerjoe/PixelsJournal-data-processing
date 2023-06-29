@@ -13,8 +13,8 @@ jobs:
       - run: python3 -m pip install coverage && python3 -m pip install pytest
       - run: coverage run -m pytest
       - run: coverage xml
-      - run: wget https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o ./trl && chmod +x trl
-      - run: ./trl before-build
-      - run: ./trl format-coverage coverage.xml  --input-type "coverage.py"
-      - run: ./trl after-build
+      - run: wget https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 && chmod +x trl
+      - run: ./test-reporter-latest-linux-amd64 before-build
+      - run: ./test-reporter-latest-linux-amd64 format-coverage coverage.xml  --input-type "coverage.py"
+      - run: ./test-reporter-latest-linux-amd64 after-build
       - run: echo "🍏 This job's status is ${{ job.status }}."
