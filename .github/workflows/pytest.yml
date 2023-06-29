@@ -1,6 +1,8 @@
 name: PyTest and Coverage
 run-name: pytest and CodeClimate cov
 on: [push]
+env:
+  CC_TEST_REPORTER_ID: ${{ vars.CC_TEST_REPORTER_ID }}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -8,11 +10,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: python3 -m pip install .
-      - run: python3 -m pip install coverage
+      - run: python3 -m pip install coverage && python3 -m pip install pytest
       - run: coverage run -m pytest
       - run: coverage xml
       - run: wget https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o ./trl && chmod +x trl
-      - run: CC_TEST_REPORTER_ID=88641fd8b9e668aca7f56b2f10d3bfa72d9321ed5798696ab8b6c3e32f146550 ./trl before-build
-      - run: CC_TEST_REPORTER_ID=88641fd8b9e668aca7f56b2f10d3bfa72d9321ed5798696ab8b6c3e32f146550 ./trl format-coverage coverage.xml  --input-type "coverage.py"
-      - run: CC_TEST_REPORTER_ID=88641fd8b9e668aca7f56b2f10d3bfa72d9321ed5798696ab8b6c3e32f146550 ./trl after-build
+      - run: ./trl before-build
+      - run: ./trl format-coverage coverage.xml  --input-type "coverage.py"
+      - run: ./trl after-build
       - run: echo "🍏 This job's status is ${{ job.status }}."
