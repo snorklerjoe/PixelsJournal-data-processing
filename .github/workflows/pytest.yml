@@ -2,7 +2,7 @@ name: PyTest and Coverage
 run-name: pytest and CodeClimate cov
 on: [push]
 env:
-  CC_TEST_REPORTER_ID: ${{ vars.CC_TEST_REPORTER_ID }}
+  CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
