@@ -1,6 +1,6 @@
 import pytest
 from pixelsprocessor.data.pixeldb import PixelDb
-from pixelsprocessor.contextmanager import PixelProcessingContext, PixelProcessingContextManager, PixelContextException
+from pixelsprocessor.context import PixelProcessingContext, PixelProcessingContextManager, PixelContextException
 
 @pytest.fixture
 def pixeldb():
