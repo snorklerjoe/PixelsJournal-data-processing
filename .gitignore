@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 test.json
+
+
+# CodeClimate coverage report
+codeclimate.json
